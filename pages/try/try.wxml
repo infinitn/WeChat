@@ -1,0 +1,4 @@
+<view>
+  <text class='title'>我是个假的WeChat</text>
+  <button bindtap='getList'>点击</button>
+</view>
