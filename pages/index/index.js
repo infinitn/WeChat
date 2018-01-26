@@ -15,9 +15,14 @@ Page({
       url: '../logs/logs'
     })
   },
-  goTry:function(){
+  goWeather:function(){
     wx.navigateTo({
-      url: '../try/try'
+      url: '../weather/weather'
+    })
+  },
+  goBus(){
+    wx.navigateTo({
+      url: '../bus/bus',
     })
   },
   onLoad: function () {

@@ -1,0 +1,12 @@
+<view>
+  <text class='title'>欢迎查看天气预报</text>
+  <view class='nowadays'>
+    <text>当前天 天气状况</text>
+  </view>
+  <view class='future'>
+    <text>未来七天  天气状况</text>
+  </view>
+  <view class='other'>
+    <text>其他数据 指数</text>
+  </view>
+</view>

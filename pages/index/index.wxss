@@ -24,10 +24,10 @@
   align-items: left;
 }
 .motto{
-  width: 50px;
-  display: inline-block;
-  height:50px;
-  background-color: #ccc;
+  /* width: 50px;
+   display: inline-block; 
+  height:50px; */
+  /* background-color: #ccc; */
   margin-right: 10rpx;
-  ali
+  margin-bottom: 10px;
 }

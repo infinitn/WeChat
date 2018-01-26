@@ -1,13 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/try/try"
+    "pages/weather/weather",
+    "pages/bus/bus"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "生活便利站",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }
