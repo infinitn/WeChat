@@ -1,9 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/weather/weather",
-    "pages/bus/bus"
+    "pages/bus/bus",
+    "pages/cars/cars",
+    "pages/reply/reply",
+    "pages/mobile/mobile",
+    "pages/block/block"
   ],
   "window": {
     "backgroundTextStyle": "light",

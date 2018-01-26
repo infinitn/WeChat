@@ -4,27 +4,22 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    grids:[
+      {name:'天气预报',url:'../../pages/weather/weather',img:'../../assest/images/icon_tabbar/weather.png'},
+      {name:'公交路线',url:'../../pages/bus/bus',img:'../../assest/images/icon_tabbar/bus.png'},
+      {name:'车型大全',url:'../../pages/cars/cars',img:'../../assest/images/icon_tabbar/car.png'},
+      {name:'智能回答',url:'../../pages/reply/reply',img:'../../assest/images/icon_tabbar/reply.png'},
+      {name:'手机归属地',url:'../../pages/mobile/mobile',img:'../../assest/images/icon_tabbar/mobile.png'},
+      {name:'待定',url:'../../pages/block/block',img:'../../assest/images/icon_tabbar/loading.png'},
+      {name:'待定',url:'../../pages/block/block',img:'../../assest/images/icon_tabbar/loading.png'},
+      {name:'待定',url:'../../pages/block/block',img:'../../assest/images/icon_tabbar/loading.png'},
+      {name:'待定',url:'../../pages/block/block',img:'../../assest/images/icon_tabbar/loading.png'},
+    ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  goWeather:function(){
-    wx.navigateTo({
-      url: '../weather/weather'
-    })
-  },
-  goBus(){
-    wx.navigateTo({
-      url: '../bus/bus',
-    })
-  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -52,13 +47,13 @@ Page({
         }
       })
     }
+
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
 })

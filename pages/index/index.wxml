@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="page">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,14 +7,14 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto" style="flex-direction:row;">
-    <view class='motto motto1' bindtap='goWeather'>天气预报</view>
-    <view class='motto motto2' bindtap='goBus'>公交车路线</view>
-    <view class='motto motto3'>待开发</view>
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for="{{grids}}" wx:key="index">
+        <navigator url="{{item.url}}" class="weui-grid" hover-class="navigator-hover">
+          <image class="weui-grid__icon" src="{{item.img}}"/>
+          <view class="weui-grid__label">{{item.name}}</view>
+        </navigator>
+      </block>
+    </view>
   </view>
-  <!-- <view class="btn-area">
-  <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
-  <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
-  <navigator url="/page/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
-</view> -->
 </view>

@@ -1,0 +1,35 @@
+<view class="page">
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd" style="width: 105px">
+                <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+                    <view class="weui-select">{{countryCodes[countryCodeIndex]}}</view>
+                </picker>
+            </view>
+            <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                <input class="weui-input" type="number" maxlength="11" focus="true" value="" bindblur="bindKeyInput" placeholder="请输入号码" />
+            </view>
+        </view>
+    </view>
+    <view class="show-phone">
+        <button class="weui-btn" type="primary" bindtap="showPhone">确定</button>
+    </view>
+    <view class="content">
+        <view class="item">
+            <text>地区： {{res_body.prov}} {{res_body.city}}</text>
+        </view>
+        <view class="item">
+            <text>类型： </text>
+            <text wx:if="{{res_body.type == 1}}">移动</text>
+            <text wx:if="{{res_body.type == 2}}">电信</text>
+            <text wx:if="{{res_body.type == 3}}">联通</text>
+            <text> {{res_body.name}}</text>
+        </view>
+        <view class="item">
+            <text>区号： {{res_body.areaCode}}</text>
+        </view>
+        <view class="item">
+            <text>邮编： {{res_body.postCode}}</text>
+        </view>
+    </view>
+</view>
